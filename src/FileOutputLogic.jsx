@@ -2314,7 +2314,7 @@ const FileOutputLogic = (props) => {
     <>
       <div className="buttonContainers">
         <button onClick={NewFiles}>Run Data Analysis</button>
-        <a className="downloadButton" ref={downloadFileNew}>
+        <a className="downloadButton" href="Wait" ref={downloadFileNew}>
           Download Completed File
         </a>
       </div>
