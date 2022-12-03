@@ -151,23 +151,23 @@ const FileOutputLogic = (props) => {
         .replaceAll(`["cluster_count":2,"dead_bit":false]`, "2")
         .replaceAll(`["cluster_count":2,"dead_bit":true]`, "2")
         .replaceAll(`["cluster_count":3,"dead_bit":true]`, "3")
-        .replaceAll(`["color":"black"]`, "15")
-        .replaceAll(`["color":"blue"]`, "11")
-        .replaceAll(`["color":"brown"]`, "12")
-        .replaceAll(`["color":"cyan"]`, "9")
-        .replaceAll(`["color":"gray"]`, "7")
-        .replaceAll(`["color":"green"]`, "13")
-        .replaceAll(`["color":"lightBlue"]`, "3")
-        .replaceAll(`["color":"lightGray"]`, "8")
-        .replaceAll(`["color":"lime"]`, "5")
-        .replaceAll(`["color":"magenta"]`, "2")
-        .replaceAll(`["color":"orange"]`, "1")
-        .replaceAll(`["color":"pink"]`, "6")
-        .replaceAll(`["color":"purple"]`, "10")
-        .replaceAll(`["color":"red"]`, "14")
-        .replaceAll(`["color":"white"]`, "0")
-        .replaceAll(`["color":"yellow"]`, "4")
-        .replaceAll(`["color":"light_blue"]`, "3")
+        .replaceAll(`["color":"black"]`,"15")
+        .replaceAll(`["color":"blue"]`,"11")
+        .replaceAll(`["color":"brown"]`,"12")
+        .replaceAll(`["color":"cyan"]`,"9")
+        .replaceAll(`["color":"gray"]`,"7")
+        .replaceAll(`["color":"green"]`,"13")
+        .replaceAll(`["color":"lightblue"]`,"3")
+        .replaceAll(`["color":"light_blue"]`,"3")
+        .replaceAll(`["color":"lime"]`,"5")
+        .replaceAll(`["color":"magenta"]`,"2")
+        .replaceAll(`["color":"orange"]`,"1")
+        .replaceAll(`["color":"pink"]`,"6")
+        .replaceAll(`["color":"purple"]`,"10")
+        .replaceAll(`["color":"red"]`,"14")
+        .replaceAll(`["color":"silver"]`,"8")
+        .replaceAll(`["color":"white"]`,"0")
+        .replaceAll(`["color":"yellow"]`,"4")
         .replaceAll(`["composter_fill_level":0]`, "0")
         .replaceAll(`["composter_fill_level":8]`, "8")
         .replaceAll(`["conditional_bit":false,"facing_direction":0]`, "0")
@@ -2306,20 +2306,20 @@ const FileOutputLogic = (props) => {
   function downloadFile() {
     const blob = new Blob([F], { type: "plain/text" });
     const fileUrl = URL.createObjectURL(blob);
-    downloadFileNew.current.setAttribute("href", fileUrl); //file location
-    downloadFileNew.current.setAttribute("download", "lool.txt"); // file name
+    downloadFileNew.current.setAttribute("href", fileUrl); 
+    downloadFileNew.current.setAttribute("download", props.FileNameInput.current.value.split("\\").pop() + "Output"); 
   }
 
   return (
     <>
       <div className="buttonContainers">
         <button onClick={NewFiles}>Run Data Analysis</button>
-        <a className="downloadButton" href="Wait" ref={downloadFileNew}>
-          Download Completed File
-        </a>
+      
+          <a className="downloadButton" href="Wait" ref={downloadFileNew}>
+            Download Completed File
+          </a>
       </div>
-
-      <textarea ref={contentOutputTargetRef} placeholder="Run the Convertor..." />
+      <textarea ref={contentOutputTargetRef} placeholder="Conversion Preview..." />
     </>
   );
 };

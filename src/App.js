@@ -41,18 +41,33 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Mine Craft Gen APP</h1>
-        <h2>Kitty Shizz's PreFab Convertor</h2>
+        <div className="headerContainer">
+          <div className="wordTitle">
+            <h1>Mine Craft Gen APP</h1>
+            <h2>Kitty Shizz's PreFab Convertor</h2>
+          </div>
+          <div className="imageTitle">
+          <img src="./images/title.png" alt="Kitty Shizz MineCraft"/>
+          </div>
+        </div>
+
         <div className="fileInputContainer">
           <label>Specify a file:</label>
           <input type="file" onChange={getFile} ref={inputFileRef} />
+          <p>File Preview:</p>
         </div>
 
-        <textarea ref={contentTargetRef} placeholder="Upload your Text Doc and See it Here."/>
+        <textarea
+          ref={contentTargetRef}
+          placeholder="Preview and Edit Your Uploaded Unmodified File Here..."
+        />
 
         <h2>Output File:</h2>
         <div className="outPutFileContainer">
-          <FileOutputLogic ContentTarget={contentTargetRef} />
+          <FileOutputLogic
+            ContentTarget={contentTargetRef}
+            FileNameInput={inputFileRef}
+          />
         </div>
       </header>
     </div>

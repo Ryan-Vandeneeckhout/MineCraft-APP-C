@@ -1,6 +1,6 @@
 .App {
   color: white;
-  padding: 3% 5%;
+  padding: 3% 8%;
   padding-top: 1%;
   min-height: 100vh;
   background: url("../public/images/cuteCats.jpg");
@@ -8,8 +8,25 @@
   font-family: Raleway;
 }
 .App-header {
-  background-color: black;
-  padding: 5%;
+  background-color: #a349a4;
+  padding: 2% 5%;
+  outline: solid black 2px;
+  border-radius: 10px;
+}
+.headerContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+.imageTitle {
+  width: 300px;
+  height: 100px;
+}
+
+.imageTitle img {
+  width: 100%;
+  height: 100%;
 }
 label {
   margin-bottom: 20px;
@@ -25,7 +42,9 @@ label {
   flex-direction: column;
   justify-content: space-between;
 }
-
+.fileInputContainer p {
+  font-weight: 800;
+}
 .buttonContainers {
   max-width: 300px;
   display: flex;
@@ -34,12 +53,15 @@ label {
 .downloadButton {
   width: 100px;
   padding: 10px;
+  height: 60px;
   margin-bottom: 20px;
+  font-size: 12px;
   text-align: center;
   text-decoration: none;
   color: black;
-  background-color: lightgrey;
+  background-color: #99d9ea;
   border-radius: 10px;
+  outline: solid black 1px;
 }
 .downloadButton:hover {
   background-color: green;
@@ -52,6 +74,12 @@ button {
   width: 100px;
   padding: 10px;
   margin-bottom: 20px;
+  background-color: #22b14c;
+  border-radius: 10px;
+  border: none;
+  height: 60px;
+  font-size: 12px;
+  outline: solid black 1px;
 }
 button:hover {
   background-color: green;
@@ -59,12 +87,13 @@ button:hover {
   color: white;
   cursor: pointer;
 }
-input {
-  padding-bottom: 20px;
-}
+
 textarea {
   min-width: 100%;
   min-height: 200px;
+  border: solid black 2px;
+  border-radius: 10px;
+  padding: 5px;
 }
 h1 {
   margin-top: 0;
