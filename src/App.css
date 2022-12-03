@@ -20,8 +20,8 @@
   justify-content: space-between;
 }
 .imageTitle {
-  width: 300px;
-  height: 100px;
+  width: 450px;
+  height: 125px;
 }
 
 .imageTitle img {
@@ -42,7 +42,7 @@ label {
   flex-direction: column;
   justify-content: space-between;
 }
-.fileInputContainer p {
+p {
   font-weight: 800;
 }
 .buttonContainers {
@@ -62,12 +62,14 @@ label {
   background-color: #99d9ea;
   border-radius: 10px;
   outline: solid black 1px;
+  font-weight: 800;
 }
 .downloadButton:hover {
-  background-color: green;
+  background-color: rgb(27, 116, 111);
   outline: solid 3px gold;
   color: white;
   cursor: pointer;
+  font-weight: 800;
 }
 
 button {
