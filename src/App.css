@@ -22,3 +22,7 @@ button {
 input {
   padding-bottom: 20px;
 }
+textarea {
+  min-width: 100%;
+  min-height: 200px;
+}
