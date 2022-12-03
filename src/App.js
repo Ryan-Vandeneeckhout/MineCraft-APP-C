@@ -48,9 +48,9 @@ function App() {
           <input type="file" onChange={getFile} ref={inputFileRef} />
         </div>
 
-        <textarea ref={contentTargetRef} />
+        <textarea ref={contentTargetRef} placeholder="Upload your Text Doc and See it Here."/>
 
-        <h1>OutPut Files</h1>
+        <h2>Output File:</h2>
         <div className="outPutFileContainer">
           <FileOutputLogic ContentTarget={contentTargetRef} />
         </div>

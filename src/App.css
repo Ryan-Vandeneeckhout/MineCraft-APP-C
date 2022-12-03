@@ -1,13 +1,18 @@
 .App {
   color: white;
   padding: 3% 5%;
+  padding-top: 1%;
   min-height: 100vh;
   background: url("../public/images/cuteCats.jpg");
   background-repeat: repeat;
+  font-family: Raleway;
 }
 .App-header {
   background-color: black;
-  padding: 2%;
+  padding: 5%;
+}
+label {
+  margin-bottom: 20px;
 }
 .holder {
   background-color: black;
@@ -20,10 +25,39 @@
   flex-direction: column;
   justify-content: space-between;
 }
+
+.buttonContainers {
+  max-width: 300px;
+  display: flex;
+  justify-content: space-between;
+}
+.downloadButton {
+  width: 100px;
+  padding: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  background-color: lightgrey;
+  border-radius: 10px;
+}
+.downloadButton:hover {
+  background-color: green;
+  outline: solid 3px gold;
+  color: white;
+  cursor: pointer;
+}
+
 button {
   width: 100px;
   padding: 10px;
   margin-bottom: 20px;
+}
+button:hover {
+  background-color: green;
+  outline: solid 3px gold;
+  color: white;
+  cursor: pointer;
 }
 input {
   padding-bottom: 20px;
@@ -31,4 +65,7 @@ input {
 textarea {
   min-width: 100%;
   min-height: 200px;
+}
+h1 {
+  margin-top: 0;
 }
