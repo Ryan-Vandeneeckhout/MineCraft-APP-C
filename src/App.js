@@ -43,7 +43,7 @@ function App() {
       <header className="App-header">
         <div className="headerContainer">
           <div className="imageTitle">
-          <img src="./images/title.png" alt="Kitty Shizz MineCraft"/>
+            <img src="./images/title.png" alt="Kitty Shizz MineCraft" />
           </div>
         </div>
 
