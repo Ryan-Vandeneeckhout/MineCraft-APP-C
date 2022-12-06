@@ -17,19 +17,22 @@
   display: flex;
   flex-direction: row;
   width: 100%;
-  justify-content: space-between;
+  justify-content: center;
 }
 .imageTitle {
   width: 450px;
   height: 125px;
 }
-
+body {
+  overflow: hidden; /* Hide scrollbars */
+}
 .imageTitle img {
   width: 100%;
   height: 100%;
 }
 label {
   margin-bottom: 20px;
+  margin-left: 10px;
 }
 .holder {
   background-color: black;
@@ -46,9 +49,9 @@ p {
   font-weight: 800;
 }
 .buttonContainers {
-  max-width: 500px;
   display: flex;
   justify-content: space-between;
+  width: 45%;
 }
 .downloadButton {
   width: 100px;
@@ -89,14 +92,23 @@ button:hover {
   color: white;
   cursor: pointer;
 }
+.green {
+  background-color: #22b14c;
+}
 
+.yellow {
+  background-color: #b8a40e;
+}
 textarea {
-  min-width: 100%;
-  min-height: 200px;
+  width: 45%;
+  min-height: 150px;
   border: solid black 2px;
   border-radius: 10px;
   padding: 5px;
 }
 h1 {
   margin-top: 0;
+}
+input {
+  margin-bottom: 10px;
 }

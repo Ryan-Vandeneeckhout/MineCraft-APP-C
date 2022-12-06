@@ -42,10 +42,6 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div className="headerContainer">
-          <div className="wordTitle">
-            <h1>Mine Craft Gen APP Version 2!</h1>
-            <h2>Kitty Shizz's PreFab Convertor</h2>
-          </div>
           <div className="imageTitle">
           <img src="./images/title.png" alt="Kitty Shizz MineCraft"/>
           </div>
