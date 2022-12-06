@@ -7,7 +7,7 @@ import NPCInput from "./NPCInput";
 
 const FileOutputLogic = (props) => {
   const contentOutputTargetRef = useRef(null);
-  const contentOutputTargetHoldDataRef = useRef(null);
+  const [contentOutputTargetHoldData, setContentOutputTargetHoldData] = useState(null); 
   const downloadFileNew = useRef(null);
   const [valueInput, setValueInput] = useState(null);
   const [valueBlockInput, setValueBlockInput] = useState("beehive");
@@ -34,11 +34,11 @@ const FileOutputLogic = (props) => {
             contentOutputTargetRef={contentOutputTargetRef}
             ContentTarget={props.ContentTarget}
             downloadFile={downloadFile}
-            contentOutputTargetHoldDataRef={contentOutputTargetHoldDataRef}
+            contentOutputTargetHoldDataRef={setContentOutputTargetHoldData}
           />
           <FileOutPutButtonTwo
             contentOutputTargetRef={contentOutputTargetRef}
-            contentOutputTargetHoldDataRef={contentOutputTargetHoldDataRef}
+            contentOutputTargetHoldDataRef={setContentOutputTargetHoldData}
             ContentTarget={props.ContentTarget}
             downloadFile={downloadFile}
           />
@@ -47,7 +47,7 @@ const FileOutputLogic = (props) => {
             valueBlockInput={valueBlockInput}
             contentOutputTargetRef={contentOutputTargetRef}
             downloadFile={downloadFile}
-            contentOutputTargetHoldDataRef={contentOutputTargetHoldDataRef}
+            contentOutputTargetHoldDataRef={contentOutputTargetHoldData}
           />
           <a className="downloadButton" href="Wait" ref={downloadFileNew}>
             Download Completed File

@@ -1,11 +1,13 @@
 const FileOutPutButtonNPC = (props) => {
   const FileOutputNPCLogic = () => {
     if (
-      (props.contentOutputTargetRef.current.value === undefined && props.contentOutputTargetHoldDataRef.current.value === undefined) || (
-      props.contentOutputTargetRef.current.value === null && props.contentOutputTargetHoldDataRef.current.value === null)
-    );
+      (props.contentOutputTargetRef.current.value === undefined && props.contentOutputTargetHoldDataRef === undefined) || (props.contentOutputTargetRef.current.value === null && props.contentOutputTargetHoldDataRef === null)
+      
+    ) {
+        console.log("failure")
+    }
     else {
-      let content = props.contentOutputTargetHoldDataRef.current.value;
+      let content = props.contentOutputTargetHoldDataRef;
       const commands = getUsefulCommands(content);
       let commands_per_npc = props.valueInput;
       let nbt_name = "Kitty_Shizz";
@@ -37,8 +39,9 @@ const FileOutPutButtonNPC = (props) => {
           NBTdata += ",";
         }
       }
-      NBTdata += getBlockCloser();
-      props.contentOutputTargetRef.current.value = NBTdata;
+        NBTdata += getBlockCloser();
+        props.contentOutputTargetRef.current.value = NBTdata;
+        console.log("success")
       props.downloadFile();
     }
 

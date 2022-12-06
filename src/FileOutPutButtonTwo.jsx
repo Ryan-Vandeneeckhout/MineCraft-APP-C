@@ -2066,7 +2066,7 @@ const FileOutPutButtonTwo = (props) => {
     Function2();
     Function3();
     props.contentOutputTargetRef.current.value = H;
-    props.contentOutputTargetHoldDataRef.current.value = H; 
+    props.contentOutputTargetHoldDataRef(H) 
     props.downloadFile();
   };
 
