@@ -32,7 +32,7 @@ const FileOutPutButtonNPC = (props) => {
         // Build meat and potatoes of the NPC
         NBTdata += getNPCOpener(curSec, nbt_name);
         NBTdata += NPCCommandList.map((x) => commandToNBT(x.trim())).join(",");
-        NBTdata += getNPCCloser();
+        NBTdata += getNPCCloser(curSec, nbt_name);
 
         // If there will be another NPC, glue with comma
         if (curSec < NPCCount) {
@@ -59,19 +59,19 @@ const FileOutPutButtonNPC = (props) => {
     }
 
     function getBlockOpener(nbt_name) {
-      return `{Block:{name:"minecraft:${props.valueBlockInput}",states:{direction:0,honey_level:0},version:17959425},Count:1b,Damage:0s,Name:"minecraft:${props.valueBlockInput}",Slot:13b,WasPickedUp:0b,tag:{display:{Lore:["Â§lÂ§bMade By: Â§dKitty Shizzî„€","Â§aNBT Tool By: Â§eBrutus314 ","Â§eand Clawsky123","Â§4Warning: Â§cDont Hold Too","Â§cMany Or You Will Lag!!Â§âˆ†"],Name:"Â§dKittys Builds: Â§gÂ§l${nbt_name}"},Occupants:[`;
+      return `{Block:{name:"minecraft:moving_block",states:{},version:17959425},Count:1b,Damage:0s,Name:"minecraft:moving_block",WasPickedUp:0b,tag:{display:{Lore:["Â§lÂ§bBuild By: Â§dKitty Shizzî„€","Â§3NBT Tool By: Â§aBrutus314 ","Â§aand Clawsky123î„","Â§9Conversion Tool By: ","Â§eExgioan!!î„‚","Â§fSpecial Thanks To:","Â§6Chronicles765!!    î„ƒ","Â§4Warning: Â§cDont Hold Too","Â§cMany Or You Will Lag!!Â§âˆ†"],Name:"Â§lÂ§dKittys Builds: Â§gÂ§l${nbt_name}"},ench:[{id:28s,lvl:1s}],movingBlock:{name:"minecraft:sea_lantern",states:{},version:17879555},movingEntity:{Occupants:[`;
     }
 
     function getBlockCloser() {
-      return "]}}";
+      return '],id:"Beehive"}}}';
     }
 
-    function getNPCOpener(section, nbt_name) {
-      return `{ActorIdentifier:"minecraft:npc<>",SaveData:{Persistent:1b,Variant:3,RawtextName:"Â§lÂ§dKittys Builds: ${nbt_name}",CustomName:"Â§lÂ§dKittys Builds: ${nbt_name}",CustomNameVisible:1b,Tags:["${nbt_name}${section}"],Actions:"[{"button_name" : "Build Part: ${section}","data" : [`;
+    function getNPCOpener(section) {
+      return `{ActorIdentifier:"minecraft:npc<>",SaveData:{Actions:"[{"button_name" : "Build Part: ${section}","data" : [`;
     }
 
-    function getNPCCloser() {
-      return `],"mode" : 0,"text" : "","type" : 1}]",InterativeText:"Â§cBuild By: Â§dKitty Shizz!!î„€\nÂ§cNBT Tool By: Â§dBrutus314 and Clawsky123.\nÂ§6Thanks For Trying Out One Of My Builds!!!"},TicksLeftToStay:0}`;
+    function getNPCCloser(section, nbt_name) {
+      return `],"mode" : 0,"text" : "","type" : 1}]",CustomName:"Â§lÂ§dKittys Builds: ${nbt_name}",CustomNameVisible:1b,InterativeText:"Â§cBuild By: Â§dKitty Shizz!!î„€\nÂ§cNBT Tool By: Â§dBrutus314 an Clawsky123!!\nÂ§cConversion Tool By: Â§dExgioan!!\nÂ§cSpecial Thanks To: Â§dChronicles765!!! î„ƒ\nÂ§6Thanks For Trying My ${nbt_name} Build!!!",Persistent:1b,Pos:[],RawtextName:"Â§lÂ§dKittys Builds: ${nbt_name}",Tags:["${nbt_name}${section}"],Variant:3,definitions:["+minecraft:npc"],identifier:"minecraft:npc"},TicksLeftToStay:0}`;
     }
 
     function commandToNBT(command) {

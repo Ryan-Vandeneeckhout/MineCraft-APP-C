@@ -112,3 +112,6 @@ h1 {
 input {
   margin-bottom: 10px;
 }
+.labelsBlockState {
+  display: none;
+}
