@@ -48,7 +48,7 @@ function App() {
         </div>
 
         <div className="fileInputContainer">
-          <label>Specify a file:</label>
+          <label>Specify a file: lol</label>
           <input type="file" onChange={getFile} ref={inputFileRef} />
           <p>File Preview:</p>
         </div>
