@@ -22,7 +22,7 @@ const FileOutputLogic = (props) => {
     downloadFileNew.current.setAttribute("href", fileUrl);
     downloadFileNew.current.setAttribute(
       "download",
-      props.FileNameInput.current.value.split("\\").pop()
+      props.FileNameInput.current.value.split("\\").pop().replace(".txt", ' Optimized Build.txt')
     );
   }
 
